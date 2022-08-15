@@ -1,0 +1,90 @@
+\documentclass[12pt]{report}
+\usepackage[top=2.3cm, bottom=2.3cm, left=2.3cm, right=2.3cm, centering]{geometry}
+\linespread{1.4}
+\usepackage[italian]{babel}
+\usepackage[utf8]{inputenc} 
+\usepackage{scrlayer-scrpage} 
+\ifoot[]{}
+\cfoot[]{}
+\ofoot[\pagemark]{\pagemark}
+\pagestyle{scrplain}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage{dirtytalk}
+\usepackage{subfig}
+\usepackage{mathptmx}
+\usepackage{titling}
+\usepackage{graphicx} 
+\usepackage{csquotes}
+\usepackage{pdfpages} 
+\usepackage[bibstyle=apa, style=apa, citestyle = apa, doi = false, isbn = false, url = false]{biblatex}
+\usepackage{hyperref,url}
+\setlength\bibitemsep{0.3\itemsep}
+\addbibresource{bibliography.bib}
+\appto{\bibsetup}{\raggedright}
+\usepackage{hyperref}
+\usepackage{titlesec} 
+\usepackage{float}
+\titleformat{\chapter}[block]
+  {\normalfont\LARGE\bfseries}{\thechapter.}{0.2em}{\LARGE}
+\titlespacing*{\chapter}{0pt}{-18pt}{15pt}
+\addbibresource{bibliography.bib}
+
+
+\begin{document}
+%\includepdf[pages={1}]{frontespizio.pdf}
+\begin{titlepage}
+ \newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+    \begin{figure}
+        \centering\includegraphics[width = 0.6\textwidth]{img/logo_unipi.png}
+    \end{figure}
+    \begin{center}
+        \textsc{\LARGE{ Laurea Magistrale \\ Informatica Umanistica \\}} 
+        \vspace{0.5cm}
+        \textsc{\LARGE{ seminario di cultura digitale a.a. 2020/21 \\}}
+        \vspace{1cm}
+        \Large{
+        \textbf{Quando la tecnologia non aiuta: \\ Il caso \textit{App Immuni}\\}}
+
+        \vspace{0.5cm}
+        
+        {\large{\textit{Alice Isola} (Matr. 545007)\\ }}
+        \vspace{0.5cm}
+    
+    {\bf Sommario}\\
+    \end{center}
+    \HRule\\
+    \textit{Perché un’applicazione così utile come l’app Immuni si è rivelata un totale fallimento?} In questa relazione cercheremo di identificare i problemi legati a Immuni, attraverso l'analisi i temi, le opinioni e i sentimenti più diffusi tra gli utenti su Twitter, utilizzando tecniche di \textit{Natural Language Processing} e  cercando di capire se questi problemi siano solo di natura tecnologica oppure coinvolgono anche aspetti di natura sociale e/o politica.\\
+    \HRule
+    
+\end{titlepage}
+
+\tableofcontents
+\thispagestyle{empty}
+\clearpage
+\setcounter{page}{1}
+\addtocontents{toc}{\protect\thispagestyle{empty}}
+\addcontentsline{toc}{chapter}{Introduzione}
+\input{introduzione.tex}
+
+\input{Capitolo 1.tex}
+\input{Capitolo 2.tex}
+\input{Capitolo 3}
+\input{Captiolo 4}
+\input{Captiolo 5}
+
+\addcontentsline{toc}{chapter}{Conclusioni}
+\input{conclusioni}
+
+\addcontentsline{toc}{chapter}{Bibliografia}
+\thispagestyle{empty}
+\nocite{*}
+\printbibliography
+
+\addcontentsline{toc}{chapter}{Sitografia}
+%\thispagestyle{empty}
+%\nocite{*}
+\input{Sitografia}
+
+\end{document}
+
+
